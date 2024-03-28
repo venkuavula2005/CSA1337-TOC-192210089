@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    char s[101];
+    scanf("%s", s);
+    char *ptr = s;
+    while (*ptr == '0' || *ptr == '1') ptr++;
+    printf("%s\n", *ptr == '\0' || (*ptr == '1' && ptr == s) ? "String belongs to the language." : "String does not belong to the language.");
+    return 0;
+}
+
+input:- 001100
+string belongs
